@@ -5,13 +5,13 @@
     "url": "https://github.com/digitalis-io"
   },
   "metadata": {
-    "description": "AI-powered development tools for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch. Based on compounding-engineering by Every, Inc.",
+    "description": "AI-powered development tools for Java, Go, React, Cassandra, PostgreSQL, Kafka, Elasticsearch and OpenSearch and more. Based on compounding-engineering by Every, Inc.",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "ai-stack-engineering",
-      "description": "Compounding engineering workflows for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch. Specialized agents for the Digitalis.io tech stack.",
+      "description": "Compounding engineering workflows for Java, Go, React, Cassandra, PostgreSQL, Kafka, Elasticsearch and OpenSearch and more. Specialized agents for the Digitalis.io tech stack.",
       "version": "1.0.0",
       "author": {
         "name": "Digitalis.io",

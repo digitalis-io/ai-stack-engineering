@@ -197,12 +197,16 @@ The system learns:
 
 ### Core Engineering Agents (17 from Original)
 
-**Code Quality**: `code-simplicity-reviewer`, `security-sentinel`, `performance-oracle`
-**Architecture**: `architecture-strategist`, `pattern-recognition-specialist`
-**Data**: `data-integrity-guardian` (PostgreSQL specialist)
-**Research**: `framework-docs-researcher`, `best-practices-researcher`
-**Workflow**: `pr-comment-resolver`, `feedback-codifier`
-**Language Experts**: Rails, Python, TypeScript reviewers
+A comprehensive suite of specialized agents for every aspect of software development:
+
+- **Code Quality** - Simplicity, security, and performance optimization
+- **Architecture** - System design and pattern recognition
+- **Data Systems** - Database integrity and PostgreSQL optimization
+- **Research** - Documentation and best practices discovery
+- **Workflow** - PR resolution and knowledge capture
+- **Language Experts** - Rails, Python, and TypeScript specialists
+
+📖 **[See Complete Agent Guide](docs/AGENTS.md)** - Detailed documentation for all 23 agents with personalities, expertise, and use cases.
 
 ## 📚 Documentation
 
