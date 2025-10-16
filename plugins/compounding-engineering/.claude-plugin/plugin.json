@@ -161,27 +161,27 @@
   "commands": {
     "workflow": [
       {
-        "name": "/review",
+        "name": "review",
         "description": "Comprehensive code review using multiple specialized agents"
       },
       {
-        "name": "/plan",
+        "name": "plan",
         "description": "Creates a structured plan for implementing changes"
       },
       {
-        "name": "/work",
+        "name": "work",
         "description": "Executes planned tasks systematically"
       },
       {
-        "name": "/triage",
+        "name": "triage",
         "description": "Analyzes and prioritizes issues or tasks"
       },
       {
-        "name": "/resolve-todo-parallel",
+        "name": "resolve_todo_parallel",
         "description": "Resolves todos in parallel using multiple agents"
       },
       {
-        "name": "/generate-command",
+        "name": "generate_command",
         "description": "Generates new custom commands for your workflow"
       }
     ]
