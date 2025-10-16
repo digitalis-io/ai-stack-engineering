@@ -1,22 +1,34 @@
-# Every Marketplace - Claude Code Plugin Marketplace
+# AI Stack Engineering - Claude Code Plugin Marketplace
 
-This repository is a Claude Code plugin marketplace that distributes the `compounding-engineering` plugin to developers building with AI-powered tools.
+This repository is a Claude Code plugin marketplace for Digitalis.io that distributes the `ai-stack-engineering` plugin customized for our tech stack: Go, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch.
+
+**Based on [every-marketplace](https://github.com/EveryInc/every-marketplace) by Every, Inc.** - We're grateful to Kieran Klaassen and the Every team for creating the original compounding engineering framework.
 
 ## Repository Structure
 
 ```
-every-marketplace/
+ai-stack-engineering/
 ├── .claude-plugin/
 │   └── marketplace.json          # Marketplace catalog (lists available plugins)
 └── plugins/
-    └── compounding-engineering/   # The actual plugin
+    └── compounding-engineering/   # The plugin (inherited structure)
         ├── .claude-plugin/
         │   └── plugin.json        # Plugin metadata
-        ├── agents/                # 15 specialized AI agents
+        ├── agents/                # 23 specialized AI agents (17 original + 6 new)
         ├── commands/              # 6 slash commands
         ├── hooks/                 # 2 automated hooks
         └── README.md              # Plugin documentation
 ```
+
+## New Stack-Specific Agents
+
+Our fork adds these agents for the Digitalis.io tech stack:
+- `golang-backend-expert` - Go patterns, concurrency, Cassandra/Kafka/PostgreSQL integration
+- `cassandra-architect` - Data modeling, partition strategies
+- `kafka-streaming-expert` - Event-driven architecture patterns
+- `react-frontend-expert` - Modern React/TypeScript patterns
+- `postgresql-specialist` - Query optimization, schema design
+- `opensearch-expert` - Full-text search, aggregations
 
 ## Philosophy: Compounding Engineering
 
@@ -45,7 +57,7 @@ When working on this repository, follow the compounding engineering process:
 3. Update `.claude-plugin/marketplace.json` to include the new plugin
 4. Test locally before committing
 
-### Updating the Compounding Engineering Plugin
+### Updating the AI Stack Engineering Plugin
 
 When agents or commands are added/removed:
 
@@ -65,6 +77,7 @@ When agents or commands are added/removed:
    - Update `components.commands` count
    - Update `agents` object to reflect which agents exist
    - Update `commands` object to reflect which commands exist
+   - Remember: plugin name is `ai-stack-engineering` but directory is still `compounding-engineering`
 
 3. **Update plugin README** at `plugins/compounding-engineering/README.md`:
 
@@ -147,19 +160,20 @@ Each plugin has its own plugin.json with detailed metadata:
 1. Install the marketplace locally:
 
    ```bash
-   claude /plugin marketplace add /Users/yourusername/every-marketplace
+   claude /plugin marketplace add /Users/yourusername/ai-stack-engineering
    ```
 
 2. Install the plugin:
 
    ```bash
-   claude /plugin install compounding-engineering
+   claude /plugin install ai-stack-engineering
    ```
 
 3. Test agents and commands:
    ```bash
    claude /review
-   claude agent kieran-rails-reviewer "test message"
+   claude agent golang-backend-expert "review this Go code"
+   claude agent cassandra-architect "review this data model"
    ```
 
 ### Validate JSON
@@ -189,10 +203,11 @@ cat plugins/compounding-engineering/.claude-plugin/plugin.json | jq .
 
 ### Updating Tags/Keywords
 
-Tags should reflect the compounding engineering philosophy:
+Tags should reflect the compounding engineering philosophy and our tech stack:
 
-- Use: `ai-powered`, `compounding-engineering`, `workflow-automation`, `knowledge-management`
-- Avoid: Framework-specific tags unless the plugin is framework-specific
+- Core philosophy: `ai-powered`, `compounding-engineering`, `workflow-automation`, `knowledge-management`
+- Tech stack: `go`, `golang`, `react`, `typescript`, `cassandra`, `postgresql`, `kafka`, `opensearch`
+- General: `code-review`, `quality`
 
 ## Commit Conventions
 
@@ -222,7 +237,19 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 
 _This section captures important learnings as we work on this repository._
 
-### 2025-10-09: Simplified marketplace.json to match official spec
+### 2025-10-16: Forked from every-marketplace for Digitalis.io tech stack
+
+Created AI Stack Engineering as a fork of every-marketplace by Every, Inc. Key customizations:
+
+- Added 6 new stack-specific agents: golang-backend-expert, cassandra-architect, kafka-streaming-expert, react-frontend-expert, postgresql-specialist, opensearch-expert
+- Updated all metadata (marketplace.json, plugin.json) to reflect ai-stack-engineering branding
+- Maintained proper attribution to original project in LICENSE, README.md, and CLAUDE.md
+- Kept core compounding engineering philosophy intact
+- Updated keywords/tags to reflect Go, React, Cassandra, PostgreSQL, Kafka, OpenSearch focus
+
+**Learning:** When forking, be generous with attribution and maintain the original philosophy while customizing for your use case.
+
+### 2025-10-09: Simplified marketplace.json to match official spec (from original)
 
 The initial marketplace.json included many custom fields (downloads, stars, rating, categories, trending) that aren't part of the Claude Code specification. We simplified to only include:
 
