@@ -83,10 +83,11 @@ Check for these indicators to determine project type:
 - `.py` files
 - `setup.py` or `poetry.lock`
 
-**Data Infrastructure**:
-- Cassandra: `.cql` files, data modeling schemas
-- Kafka: Event schemas, producer/consumer code
-- OpenSearch: Index mappings, search queries
+**Data Infrastructure** (detected within code):
+- Cassandra: gocql/datastax imports, `.cql` files, data modeling
+- Kafka: Sarama/franz-go imports, event schemas, producer/consumer code
+- OpenSearch/Elasticsearch: Elastic clients, index mappings, search queries
+- PostgreSQL: Database migrations, complex queries (covered by data-integrity-guardian)
 
 Based on detection, set appropriate reviewers for parallel execution.
 
@@ -102,7 +103,7 @@ Run ALL or most of these agents at the same time, adjusting language-specific re
 
 For Go projects:
 1. Task golang-reviewer(PR content)
-2. If Cassandra used: Task cassandra-architect(PR content)
+2. If Cassandra used: Task cassandra-guardian(PR content)
 3. If Kafka used: Task kafka-guardian(PR content)
 
 For React/TypeScript Frontend:
@@ -121,9 +122,9 @@ For Python projects:
 1. Task kieran-python-reviewer(PR content)
 
 **Data Infrastructure Reviewers (if applicable)**:
-- If Cassandra schemas/queries: Task cassandra-architect(PR content)
+- If Cassandra schemas/queries: Task cassandra-guardian(PR content)
 - If Kafka producers/consumers: Task kafka-guardian(PR content)
-- If OpenSearch mappings/queries: Task search-architect(PR content)
+- If OpenSearch/Elasticsearch mappings/queries: Task search-sentinel(PR content)
 
 **Universal Reviewers (run for all project types)**:
 4. Task git-history-analyzer(PR content)

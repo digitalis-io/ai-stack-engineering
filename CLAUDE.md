@@ -24,10 +24,10 @@ ai-stack-engineering/
 
 Our fork adds these agents for the Digitalis.io tech stack:
 - `golang-reviewer` - Pragmatic Go code review with production battle scars
-- `cassandra-architect` - Data modeling wisdom from debugging hot partitions at 4am
+- `cassandra-guardian` - Cassandra data modeling (modern compaction strategies), preventing hot partitions
 - `kafka-guardian` - Event streaming reliability, preventing data loss
 - `react-reviewer` - Modern React/TypeScript, fixing re-renders and hook issues
-- `search-architect` - OpenSearch/Elasticsearch relevance and performance
+- `search-sentinel` - OpenSearch/Elasticsearch relevance and performance (works with both)
 
 Note: PostgreSQL optimization is covered by the existing `data-integrity-guardian` agent.
 
@@ -174,8 +174,9 @@ Each plugin has its own plugin.json with detailed metadata:
    ```bash
    claude /review
    claude agent golang-reviewer "review this Go code"
-   claude agent cassandra-architect "review this data model"
+   claude agent cassandra-guardian "review this Cassandra schema"
    claude agent kafka-guardian "check my consumer offset management"
+   claude agent search-sentinel "optimize this search query"
    ```
 
 ### Validate JSON
@@ -245,11 +246,11 @@ Created AI Stack Engineering as a fork of every-marketplace by Every, Inc. Key c
 
 - Added 5 new stack-specific agents with personality and voice matching existing quality:
   - `golang-reviewer` - Pragmatic Go engineer who's debugged production at 3am
-  - `cassandra-architect` - Battle-hardened expert who's fixed hot partitions at 4am
+  - `cassandra-guardian` - Battle-hardened Cassandra expert (modern features, UCS)
   - `kafka-guardian` - Reliability engineer who's hunted down data loss bugs
   - `react-reviewer` - Frontend dev who's fixed infinite re-renders too many times
-  - `search-architect` - OpenSearch engineer who's tuned relevance at scale
-- Used consistent naming patterns: reviewer, architect, guardian (not "expert")
+  - `search-sentinel` - OpenSearch/Elasticsearch engineer who's tuned relevance at scale
+- Used consistent naming patterns: reviewer, guardian, sentinel (matching existing agents)
 - Each agent has personality, philosophy, memorable closing lines like dhh-rails-reviewer
 - Removed postgresql-specialist (covered by existing data-integrity-guardian)
 - Updated code-simplicity-reviewer with measurable quality metrics (cyclomatic complexity, SOLID principles)

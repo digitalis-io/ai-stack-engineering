@@ -86,9 +86,9 @@ Our marketplace includes specialized agents for the Digitalis.io tech stack:
 
 ### Backend & Infrastructure
 - **golang-reviewer** - Pragmatic Go code review: concurrency safety, error handling, database integration
-- **cassandra-architect** - Battle-tested data modeling: partition design, query patterns, avoiding hot partitions
+- **cassandra-guardian** - Modern Cassandra: partition design, SAI indexes, vector search, UCS compaction, data masking
 - **kafka-guardian** - Event streaming reliability: delivery guarantees, offset management, rebalancing
-- **search-architect** - OpenSearch/Elasticsearch: relevance tuning, index design, query performance
+- **search-sentinel** - OpenSearch/Elasticsearch: relevance tuning, index design, query performance
 
 ### Frontend
 - **react-reviewer** - Modern React patterns: hooks, performance, TypeScript, avoiding re-renders
