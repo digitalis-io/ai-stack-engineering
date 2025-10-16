@@ -1,21 +1,28 @@
 {
-  "name": "compounding-engineering",
+  "name": "ai-stack-engineering",
   "version": "1.0.0",
-  "description": "AI-powered development tools that get smarter with every use. Make each unit of engineering work easier than the last. Includes 15 specialized agents and 6 commands.",
+  "description": "Compounding engineering workflows for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch. Specialized agents for the Digitalis.io tech stack. Based on compounding-engineering by Every, Inc.",
   "author": {
-    "name": "Kieran Klaassen",
-    "email": "kieran@every.to",
-    "url": "https://github.com/kieranklaassen"
+    "name": "Digitalis.io",
+    "url": "https://github.com/digitalis-io"
   },
-  "homepage": "https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it",
-  "repository": "https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it",
+  "homepage": "https://github.com/digitalis-io/ai-stack-engineering",
+  "repository": "https://github.com/digitalis-io/ai-stack-engineering",
   "license": "MIT",
   "keywords": [
     "ai-powered",
     "compounding-engineering",
     "workflow-automation",
+    "knowledge-management",
+    "go",
+    "golang",
+    "react",
+    "typescript",
+    "cassandra",
+    "postgresql",
+    "kafka",
+    "opensearch",
     "code-review",
-    "quality",
-    "knowledge-management"
+    "quality"
   ]
 }

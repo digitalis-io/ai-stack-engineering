@@ -1,25 +1,24 @@
 {
-  "name": "every-marketplace",
+  "name": "ai-stack-engineering",
   "owner": {
-    "name": "Every Inc.",
-    "url": "https://github.com/EveryInc"
+    "name": "Digitalis.io",
+    "url": "https://github.com/digitalis-io"
   },
   "metadata": {
-    "description": "Official Every plugin marketplace for Claude Code extensions",
+    "description": "AI-powered development tools for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch. Based on compounding-engineering by Every, Inc.",
     "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "compounding-engineering",
-      "description": "AI-powered development tools that get smarter with every use. Make each unit of engineering work easier than the last. Includes 15 specialized agents and 6 commands.",
+      "name": "ai-stack-engineering",
+      "description": "Compounding engineering workflows for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch. Specialized agents for the Digitalis.io tech stack.",
       "version": "1.0.0",
       "author": {
-        "name": "Kieran Klaassen",
-        "url": "https://github.com/kieranklaassen",
-        "email": "kieran@every.to"
+        "name": "Digitalis.io",
+        "url": "https://github.com/digitalis-io"
       },
-      "homepage": "https://github.com/EveryInc/compounding-engineering-plugin",
-      "tags": ["ai-powered", "compounding-engineering", "workflow-automation", "code-review", "quality", "knowledge-management"],
+      "homepage": "https://github.com/digitalis-io/ai-stack-engineering",
+      "tags": ["ai-powered", "compounding-engineering", "workflow-automation", "knowledge-management", "go", "react", "cassandra", "postgresql", "kafka", "opensearch"],
       "source": "./plugins/compounding-engineering"
     }
   ]
