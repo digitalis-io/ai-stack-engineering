@@ -57,6 +57,17 @@ This will inform which language-specific reviewers to use.
 
 Check for these indicators to determine project type:
 
+**Go Project**:
+- `go.mod` file
+- `.go` files
+- `main.go` or package structure
+
+**React/TypeScript Frontend**:
+- `tsconfig.json`
+- `package.json` with React dependencies
+- `.tsx` or `.jsx` files
+- React component patterns
+
 **Rails Project**:
 - `Gemfile` with `rails` gem
 - `config/application.rb`
@@ -72,6 +83,11 @@ Check for these indicators to determine project type:
 - `.py` files
 - `setup.py` or `poetry.lock`
 
+**Data Infrastructure**:
+- Cassandra: `.cql` files, data modeling schemas
+- Kafka: Event schemas, producer/consumer code
+- OpenSearch: Index mappings, search queries
+
 Based on detection, set appropriate reviewers for parallel execution.
 
 </project_type_detection>
@@ -84,6 +100,15 @@ Run ALL or most of these agents at the same time, adjusting language-specific re
 
 **Language-Specific Reviewers (choose based on project type)**:
 
+For Go projects:
+1. Task golang-reviewer(PR content)
+2. If Cassandra used: Task cassandra-architect(PR content)
+3. If Kafka used: Task kafka-guardian(PR content)
+
+For React/TypeScript Frontend:
+1. Task react-reviewer(PR content)
+2. Task kieran-typescript-reviewer(PR content)
+
 For Rails projects:
 1. Task kieran-rails-reviewer(PR content)
 2. Task dhh-rails-reviewer(PR title)
@@ -94,6 +119,11 @@ For TypeScript projects:
 
 For Python projects:
 1. Task kieran-python-reviewer(PR content)
+
+**Data Infrastructure Reviewers (if applicable)**:
+- If Cassandra schemas/queries: Task cassandra-architect(PR content)
+- If Kafka producers/consumers: Task kafka-guardian(PR content)
+- If OpenSearch mappings/queries: Task search-architect(PR content)
 
 **Universal Reviewers (run for all project types)**:
 4. Task git-history-analyzer(PR content)

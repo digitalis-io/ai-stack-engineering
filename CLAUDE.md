@@ -14,7 +14,7 @@ ai-stack-engineering/
     └── compounding-engineering/   # The plugin (inherited structure)
         ├── .claude-plugin/
         │   └── plugin.json        # Plugin metadata
-        ├── agents/                # 23 specialized AI agents (17 original + 6 new)
+        ├── agents/                # 22 specialized AI agents (17 original + 5 new)
         ├── commands/              # 6 slash commands
         ├── hooks/                 # 2 automated hooks
         └── README.md              # Plugin documentation
@@ -23,12 +23,13 @@ ai-stack-engineering/
 ## New Stack-Specific Agents
 
 Our fork adds these agents for the Digitalis.io tech stack:
-- `golang-backend-expert` - Go patterns, concurrency, Cassandra/Kafka/PostgreSQL integration
-- `cassandra-architect` - Data modeling, partition strategies
-- `kafka-streaming-expert` - Event-driven architecture patterns
-- `react-frontend-expert` - Modern React/TypeScript patterns
-- `postgresql-specialist` - Query optimization, schema design
-- `opensearch-expert` - Full-text search, aggregations
+- `golang-reviewer` - Pragmatic Go code review with production battle scars
+- `cassandra-architect` - Data modeling wisdom from debugging hot partitions at 4am
+- `kafka-guardian` - Event streaming reliability, preventing data loss
+- `react-reviewer` - Modern React/TypeScript, fixing re-renders and hook issues
+- `search-architect` - OpenSearch/Elasticsearch relevance and performance
+
+Note: PostgreSQL optimization is covered by the existing `data-integrity-guardian` agent.
 
 ## Philosophy: Compounding Engineering
 
@@ -172,8 +173,9 @@ Each plugin has its own plugin.json with detailed metadata:
 3. Test agents and commands:
    ```bash
    claude /review
-   claude agent golang-backend-expert "review this Go code"
+   claude agent golang-reviewer "review this Go code"
    claude agent cassandra-architect "review this data model"
+   claude agent kafka-guardian "check my consumer offset management"
    ```
 
 ### Validate JSON
@@ -241,13 +243,20 @@ _This section captures important learnings as we work on this repository._
 
 Created AI Stack Engineering as a fork of every-marketplace by Every, Inc. Key customizations:
 
-- Added 6 new stack-specific agents: golang-backend-expert, cassandra-architect, kafka-streaming-expert, react-frontend-expert, postgresql-specialist, opensearch-expert
+- Added 5 new stack-specific agents with personality and voice matching existing quality:
+  - `golang-reviewer` - Pragmatic Go engineer who's debugged production at 3am
+  - `cassandra-architect` - Battle-hardened expert who's fixed hot partitions at 4am
+  - `kafka-guardian` - Reliability engineer who's hunted down data loss bugs
+  - `react-reviewer` - Frontend dev who's fixed infinite re-renders too many times
+  - `search-architect` - OpenSearch engineer who's tuned relevance at scale
+- Used consistent naming patterns: reviewer, architect, guardian (not "expert")
+- Each agent has personality, philosophy, memorable closing lines like dhh-rails-reviewer
+- Removed postgresql-specialist (covered by existing data-integrity-guardian)
+- Updated code-simplicity-reviewer with measurable quality metrics (cyclomatic complexity, SOLID principles)
 - Updated all metadata (marketplace.json, plugin.json) to reflect ai-stack-engineering branding
 - Maintained proper attribution to original project in LICENSE, README.md, and CLAUDE.md
-- Kept core compounding engineering philosophy intact
-- Updated keywords/tags to reflect Go, React, Cassandra, PostgreSQL, Kafka, OpenSearch focus
 
-**Learning:** When forking, be generous with attribution and maintain the original philosophy while customizing for your use case.
+**Learning:** Agent quality matters more than quantity. Each agent should have a distinct voice and personality, not just be a checklist. Use consistent naming patterns that match the existing ecosystem.
 
 ### 2025-10-09: Simplified marketplace.json to match official spec (from original)
 

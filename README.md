@@ -85,14 +85,13 @@ graph LR
 Our marketplace includes specialized agents for the Digitalis.io tech stack:
 
 ### Backend & Infrastructure
-- **golang-backend-expert** - Idiomatic Go patterns, concurrency, Cassandra/Kafka/PostgreSQL integration
-- **cassandra-architect** - Data modeling, partition strategies, materialized views
-- **kafka-streaming-expert** - Event-driven architecture, stream processing patterns
-- **postgresql-specialist** - Query optimization, schema design, indexing strategies
-- **opensearch-expert** - Full-text search, aggregations, performance tuning
+- **golang-reviewer** - Pragmatic Go code review: concurrency safety, error handling, database integration
+- **cassandra-architect** - Battle-tested data modeling: partition design, query patterns, avoiding hot partitions
+- **kafka-guardian** - Event streaming reliability: delivery guarantees, offset management, rebalancing
+- **search-architect** - OpenSearch/Elasticsearch: relevance tuning, index design, query performance
 
 ### Frontend
-- **react-frontend-expert** - Modern React patterns, TypeScript, hooks, state management
+- **react-reviewer** - Modern React patterns: hooks, performance, TypeScript, avoiding re-renders
 
 ### General (inherited from original)
 - Architecture and system design
