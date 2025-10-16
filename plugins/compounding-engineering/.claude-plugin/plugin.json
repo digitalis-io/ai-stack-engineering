@@ -24,5 +24,159 @@
     "opensearch",
     "code-review",
     "quality"
-  ]
+  ],
+  "components": {
+    "agents": 22,
+    "commands": 6
+  },
+  "agents": {
+    "code-review": [
+      {
+        "name": "golang-reviewer",
+        "description": "Idiomatic Go review following Uber style guide, checking concurrency patterns, interfaces, and production readiness",
+        "use_cases": ["go-review", "concurrency-patterns", "interface-design"]
+      },
+      {
+        "name": "react-reviewer",
+        "description": "Modern React/TypeScript review catching re-renders, hook dependencies, and component architecture issues",
+        "use_cases": ["react-review", "typescript-review", "hooks-optimization"]
+      },
+      {
+        "name": "dhh-rails-reviewer",
+        "description": "Rails code review in DHH's style, focusing on simplicity and Rails Way patterns",
+        "use_cases": ["rails-review", "simplicity", "rails-conventions"]
+      },
+      {
+        "name": "kieran-rails-reviewer",
+        "description": "Rails code review from Kieran's perspective, emphasizing maintainability",
+        "use_cases": ["rails-review", "maintainability"]
+      },
+      {
+        "name": "kieran-typescript-reviewer",
+        "description": "TypeScript code review focusing on type safety and modern patterns",
+        "use_cases": ["typescript-review", "type-safety"]
+      },
+      {
+        "name": "kieran-python-reviewer",
+        "description": "Python code review emphasizing readability and pythonic patterns",
+        "use_cases": ["python-review", "pythonic-code"]
+      },
+      {
+        "name": "code-simplicity-reviewer",
+        "description": "Reviews code for simplicity with measurable quality metrics (cyclomatic complexity, SOLID principles)",
+        "use_cases": ["simplification", "code-quality", "refactoring"]
+      },
+      {
+        "name": "security-sentinel",
+        "description": "Security review catching vulnerabilities and security anti-patterns",
+        "use_cases": ["security-review", "vulnerability-detection"]
+      }
+    ],
+    "infrastructure": [
+      {
+        "name": "cassandra-guardian",
+        "description": "Cassandra data modeling review using modern features (UCS compaction), preventing hot partitions and anti-patterns",
+        "use_cases": ["cassandra-review", "data-modeling", "partition-design"]
+      },
+      {
+        "name": "kafka-guardian",
+        "description": "Kafka/event streaming reliability review, preventing data loss and ensuring proper offset management",
+        "use_cases": ["kafka-review", "event-streaming", "data-reliability"]
+      },
+      {
+        "name": "search-sentinel",
+        "description": "OpenSearch/Elasticsearch relevance and performance optimization (works with both engines)",
+        "use_cases": ["opensearch-review", "elasticsearch-review", "search-relevance"]
+      },
+      {
+        "name": "data-integrity-guardian",
+        "description": "Database integrity review covering PostgreSQL and general data consistency",
+        "use_cases": ["database-review", "postgresql-review", "data-integrity"]
+      },
+      {
+        "name": "performance-oracle",
+        "description": "Performance analysis and optimization recommendations",
+        "use_cases": ["performance-review", "optimization"]
+      }
+    ],
+    "architecture": [
+      {
+        "name": "architecture-strategist",
+        "description": "High-level architecture review and design guidance",
+        "use_cases": ["architecture-review", "design-patterns", "system-design"]
+      },
+      {
+        "name": "pattern-recognition-specialist",
+        "description": "Identifies code patterns and suggests improvements",
+        "use_cases": ["pattern-detection", "code-analysis"]
+      }
+    ],
+    "research": [
+      {
+        "name": "repo-research-analyst",
+        "description": "Analyzes repository structure and codebase organization",
+        "use_cases": ["codebase-analysis", "repo-structure"]
+      },
+      {
+        "name": "git-history-analyzer",
+        "description": "Analyzes git history to understand code evolution and hotspots",
+        "use_cases": ["git-analysis", "code-history", "hotspot-detection"]
+      },
+      {
+        "name": "framework-docs-researcher",
+        "description": "Researches framework documentation and best practices",
+        "use_cases": ["documentation-research", "framework-guidance"]
+      },
+      {
+        "name": "best-practices-researcher",
+        "description": "Researches industry best practices for specific technologies",
+        "use_cases": ["best-practices", "industry-standards"]
+      }
+    ],
+    "workflow": [
+      {
+        "name": "pr-comment-resolver",
+        "description": "Resolves PR comments and feedback systematically",
+        "use_cases": ["pr-feedback", "comment-resolution"]
+      },
+      {
+        "name": "feedback-codifier",
+        "description": "Captures learnings and updates documentation with feedback",
+        "use_cases": ["knowledge-capture", "documentation-updates"]
+      },
+      {
+        "name": "every-style-editor",
+        "description": "Edits content to match Every's writing style",
+        "use_cases": ["style-editing", "content-review"]
+      }
+    ]
+  },
+  "commands": {
+    "workflow": [
+      {
+        "name": "/review",
+        "description": "Comprehensive code review using multiple specialized agents"
+      },
+      {
+        "name": "/plan",
+        "description": "Creates a structured plan for implementing changes"
+      },
+      {
+        "name": "/work",
+        "description": "Executes planned tasks systematically"
+      },
+      {
+        "name": "/triage",
+        "description": "Analyzes and prioritizes issues or tasks"
+      },
+      {
+        "name": "/resolve-todo-parallel",
+        "description": "Resolves todos in parallel using multiple agents"
+      },
+      {
+        "name": "/generate-command",
+        "description": "Generates new custom commands for your workflow"
+      }
+    ]
+  }
 }

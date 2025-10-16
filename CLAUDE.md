@@ -16,7 +16,6 @@ ai-stack-engineering/
         │   └── plugin.json        # Plugin metadata
         ├── agents/                # 22 specialized AI agents (17 original + 5 new)
         ├── commands/              # 6 slash commands
-        ├── hooks/                 # 2 automated hooks
         └── README.md              # Plugin documentation
 ```
 
@@ -135,9 +134,8 @@ Each plugin has its own plugin.json with detailed metadata:
   "author": { ... },
   "keywords": ["keyword1", "keyword2"],
   "components": {
-    "agents": 15,
-    "commands": 6,
-    "hooks": 2
+    "agents": 22,
+    "commands": 6
   },
   "agents": {
     "category": [
