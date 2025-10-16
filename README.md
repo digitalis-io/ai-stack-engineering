@@ -85,7 +85,7 @@ graph LR
 Our marketplace includes specialized agents for the Digitalis.io tech stack:
 
 ### Backend & Infrastructure
-- **golang-reviewer** - Pragmatic Go code review: concurrency safety, error handling, database integration
+- **golang-reviewer** - Idiomatic Go review: concurrency safety, interface design, Uber style guide, production readiness
 - **cassandra-guardian** - Modern Cassandra: partition design, SAI indexes, vector search, UCS compaction, data masking
 - **kafka-guardian** - Event streaming reliability: delivery guarantees, offset management, rebalancing
 - **search-sentinel** - OpenSearch/Elasticsearch: relevance tuning, index design, query performance

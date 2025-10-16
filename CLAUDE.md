@@ -23,7 +23,7 @@ ai-stack-engineering/
 ## New Stack-Specific Agents
 
 Our fork adds these agents for the Digitalis.io tech stack:
-- `golang-reviewer` - Pragmatic Go code review with production battle scars
+- `golang-reviewer` - Idiomatic Go review (Uber style guide, concurrency, interfaces)
 - `cassandra-guardian` - Cassandra data modeling (modern compaction strategies), preventing hot partitions
 - `kafka-guardian` - Event streaming reliability, preventing data loss
 - `react-reviewer` - Modern React/TypeScript, fixing re-renders and hook issues
