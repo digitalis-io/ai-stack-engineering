@@ -89,6 +89,12 @@ Check for these indicators to determine project type:
 - `src/main/java` structure
 - `@SpringBootApplication` annotations
 
+**C/C++ Project**:
+- `CMakeLists.txt` or `Makefile`
+- `.cpp`, `.cc`, `.cxx`, `.c`, `.h`, `.hpp` files
+- `src/` or `include/` directories
+- Cassandra driver includes (`cassandra.h`)
+
 **Data Infrastructure** (detected within code):
 - Cassandra: gocql/datastax imports, `.cql` files, data modeling
 - Kafka: Sarama/franz-go imports, event schemas, producer/consumer code
@@ -128,6 +134,10 @@ For Python projects:
 
 For Java/Spring Boot projects:
 1. Task java-craftsman(PR content)
+
+For C/C++ projects:
+1. Task cpp-systems-specialist(PR content)
+2. If Cassandra driver: Also run cassandra-guardian(PR content)
 
 **Data Infrastructure Reviewers (if applicable)**:
 - If Cassandra schemas/queries: Task cassandra-guardian(PR content)

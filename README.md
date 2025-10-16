@@ -6,7 +6,7 @@
 [![Based on Every](https://img.shields.io/badge/Based%20on-Every--Marketplace-blue)](https://github.com/EveryInc/every-marketplace)
 [![Company: Digitalis.io](https://img.shields.io/badge/Company-Digitalis.io-green)](https://digitalis.io)
 
-A Claude Code plugin marketplace featuring specialized AI agents and workflows customized for modern distributed systems: **Go, Java/Spring Boot, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch**.
+A Claude Code plugin marketplace featuring specialized AI agents and workflows customized for modern distributed systems: **Go, Java/Spring Boot, C/C++, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch**.
 
 ---
 
@@ -157,7 +157,7 @@ The system learns:
 
 ## 🤖 Our Tech Stack Agents
 
-### Specialized for Distributed Systems (6 Custom Agents)
+### Specialized for Distributed Systems (7 Custom Agents)
 
 #### `golang-reviewer`
 *"I've debugged production at 3am. Make it obvious, make it work, make it fast—in that order."*
@@ -195,6 +195,13 @@ The system learns:
 - Query performance at scale
 - Index design that doesn't explode
 
+#### `cpp-systems-specialist`
+*"Make it correct, make it safe, then make it fast. In that order."*
+- Memory safety and RAII enforcement
+- Catches undefined behavior before it crashes production
+- Thread safety and race condition detection
+- Cassandra C++ driver expertise
+
 ### Core Engineering Agents (17 from Original)
 
 A comprehensive suite of specialized agents for every aspect of software development:
@@ -206,7 +213,7 @@ A comprehensive suite of specialized agents for every aspect of software develop
 - **Workflow** - PR resolution and knowledge capture
 - **Language Experts** - Rails, Python, and TypeScript specialists
 
-📖 **[See Complete Agent Guide](docs/AGENTS.md)** - Detailed documentation for all 23 agents with personalities, expertise, and use cases.
+📖 **[See Complete Agent Guide](docs/AGENTS.md)** - Detailed documentation for all 24 agents with personalities, expertise, and use cases.
 
 ## 📚 Documentation
 

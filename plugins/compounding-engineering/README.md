@@ -8,7 +8,7 @@ Based on [compounding-engineering](https://github.com/EveryInc/every-marketplace
 
 ## What's Inside
 
-- **23 Specialized Agents** - Code reviewers, infrastructure guardians, and workflow automation
+- **24 Specialized Agents** - Code reviewers, infrastructure guardians, and workflow automation
 - **6 Slash Commands** - /review, /plan, /work, /triage, and more
 - **Zero Hooks** - Lightweight and non-intrusive
 
@@ -18,6 +18,7 @@ Our fork adds these agents for the Digitalis.io tech stack:
 
 - **`golang-reviewer`** - Idiomatic Go review (Uber style guide, concurrency, interfaces)
 - **`java-craftsman`** - Battle-tested Java/Spring Boot review, preventing overengineering disasters
+- **`cpp-systems-specialist`** - C/C++ systems programming (memory safety, RAII, undefined behavior)
 - **`cassandra-guardian`** - Cassandra data modeling (modern compaction strategies), preventing hot partitions
 - **`kafka-guardian`** - Event streaming reliability, preventing data loss
 - **`react-reviewer`** - Modern React/TypeScript, fixing re-renders and hook issues
@@ -27,9 +28,10 @@ PostgreSQL optimization is covered by the existing `data-integrity-guardian` age
 
 ## All Agents
 
-### Code Review (9 agents)
+### Code Review (10 agents)
 - `golang-reviewer` - Go code review with concurrency patterns and interface design
 - `java-craftsman` - Java/Spring Boot review preventing AbstractFactoryFactory disasters
+- `cpp-systems-specialist` - C/C++ review for memory safety and systems programming
 - `react-reviewer` - React/TypeScript review catching re-renders and hook issues
 - `dhh-rails-reviewer` - Rails review in DHH's style
 - `kieran-rails-reviewer` - Rails review emphasizing maintainability
@@ -111,6 +113,9 @@ claude agent cassandra-guardian "review this table schema for hot partitions"
 
 # Kafka consumer review
 claude agent kafka-guardian "check my consumer offset management"
+
+# C++ systems review
+claude agent cpp-systems-specialist "review this C++ code for memory safety and thread safety"
 
 # React component review
 claude agent react-reviewer "review this component for re-render issues"

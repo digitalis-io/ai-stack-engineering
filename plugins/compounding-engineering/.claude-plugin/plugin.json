@@ -28,7 +28,7 @@
     "quality"
   ],
   "components": {
-    "agents": 23,
+    "agents": 24,
     "commands": 6
   },
   "agents": {
@@ -72,6 +72,11 @@
         "name": "code-simplicity-reviewer",
         "description": "Reviews code for simplicity with measurable quality metrics (cyclomatic complexity, SOLID principles)",
         "use_cases": ["simplification", "code-quality", "refactoring"]
+      },
+      {
+        "name": "cpp-systems-specialist",
+        "description": "C/C++ systems programming review focusing on memory safety, RAII, thread safety, and undefined behavior prevention",
+        "use_cases": ["cpp-review", "memory-safety", "systems-programming", "cassandra-drivers"]
       },
       {
         "name": "security-sentinel",

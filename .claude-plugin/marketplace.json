@@ -18,7 +18,7 @@
         "url": "https://github.com/digitalis-io"
       },
       "homepage": "https://github.com/digitalis-io/ai-stack-engineering",
-      "tags": ["ai-powered", "compounding-engineering", "workflow-automation", "knowledge-management", "go", "react", "cassandra", "postgresql", "kafka", "opensearch"],
+      "tags": ["ai-powered", "compounding-engineering", "workflow-automation", "knowledge-management", "go", "java", "cpp", "react", "cassandra", "postgresql", "kafka", "opensearch"],
       "source": "./plugins/compounding-engineering"
     }
   ]

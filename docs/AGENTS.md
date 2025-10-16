@@ -1,16 +1,17 @@
 # AI Stack Engineering - Complete Agent Guide
 
-This guide provides detailed documentation for all 23 specialized AI agents in the AI Stack Engineering plugin. Each agent has unique expertise and personality, designed to catch specific issues and improve your code quality.
+This guide provides detailed documentation for all 24 specialized AI agents in the AI Stack Engineering plugin. Each agent has unique expertise and personality, designed to catch specific issues and improve your code quality.
 
 ## Table of Contents
 
-- [Stack-Specific Agents (6 Custom)](#stack-specific-agents-6-custom)
+- [Stack-Specific Agents (7 Custom)](#stack-specific-agents-7-custom)
   - [golang-reviewer](#golang-reviewer)
   - [java-craftsman](#java-craftsman)
   - [cassandra-guardian](#cassandra-guardian)
   - [kafka-guardian](#kafka-guardian)
   - [react-reviewer](#react-reviewer)
   - [search-sentinel](#search-sentinel)
+  - [cpp-systems-specialist](#cpp-systems-specialist)
 - [Code Quality Agents (5)](#code-quality-agents-5)
   - [code-simplicity-reviewer](#code-simplicity-reviewer)
   - [security-sentinel](#security-sentinel)
@@ -37,7 +38,7 @@ This guide provides detailed documentation for all 23 specialized AI agents in t
 
 ---
 
-## Stack-Specific Agents (6 Custom)
+## Stack-Specific Agents (7 Custom)
 
 These agents were specifically created for the Digitalis.io tech stack, each with deep expertise in their domain.
 
@@ -206,6 +207,38 @@ These agents were specifically created for the Digitalis.io tech stack, each wit
 - Optimizing query performance
 - Tuning search relevance
 - Planning index strategies
+
+---
+
+### cpp-systems-specialist
+
+**Personality**: *"Make it correct, make it safe, then make it fast. In that order."*
+
+**Expertise**:
+- Modern C++ best practices (C++17/20/23)
+- Memory safety and RAII patterns
+- Thread safety and concurrency
+- Undefined behavior prevention
+- Template metaprogramming
+- Cassandra C++ driver development
+- Systems programming and performance
+
+**Catches**:
+- Memory leaks and use-after-free
+- Race conditions and deadlocks
+- Undefined behavior traps
+- Buffer overflows and bounds violations
+- Resource leaks (file handles, sockets)
+- ABI compatibility issues
+- Compilation time explosions from templates
+
+**When to Use**:
+- C/C++ code reviews
+- Cassandra driver development
+- Systems programming
+- Performance-critical code
+- Multi-threaded applications
+- Memory-sensitive components
 
 ---
 
@@ -735,6 +768,13 @@ Some agents work particularly well together:
 
 **For Go Services**:
 - `golang-reviewer` + `security-sentinel` + `performance-oracle`
+
+**For Java Services**:
+- `java-craftsman` + `security-sentinel` + `performance-oracle`
+
+**For C/C++ Systems**:
+- `cpp-systems-specialist` + `security-sentinel` + `performance-oracle`
+- For Cassandra drivers: `cpp-systems-specialist` + `cassandra-guardian`
 
 **For Data Systems**:
 - `cassandra-guardian` + `kafka-guardian` + `data-integrity-guardian`
