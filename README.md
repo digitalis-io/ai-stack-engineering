@@ -94,26 +94,54 @@ claude /review
 ## 🔄 The Compounding Engineering Workflow
 
 ```mermaid
-graph LR
-    A[🎯 PLAN<br/>Research & Design] --> B[📋 DELEGATE<br/>Execute with AI]
-    B --> C[🔍 ASSESS<br/>Multi-Agent Review]
-    C --> D[🔄 CODIFY<br/>Capture Learnings]
-    D --> A
+flowchart LR
+    subgraph TODAY["🌱 Today: First Feature"]
+        A1[PLAN<br/>30 min] --> B1[DELEGATE<br/>2 hours]
+        B1 --> C1[ASSESS<br/>1 hour]
+        C1 --> D1[CODIFY<br/>30 min]
+    end
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#ffb,stroke:#333,stroke-width:2px
+    subgraph TOMORROW["🌿 Tomorrow: Pattern Recognition"]
+        A2[PLAN<br/>15 min] --> B2[DELEGATE<br/>1 hour]
+        B2 --> C2[ASSESS<br/>30 min]
+        C2 --> D2[CODIFY<br/>15 min]
+    end
+
+    subgraph NEXTWEEK["🌳 Next Week: Acceleration"]
+        A3[PLAN<br/>5 min] --> B3[DELEGATE<br/>30 min]
+        B3 --> C3[ASSESS<br/>15 min]
+        C3 --> D3[CODIFY<br/>5 min]
+    end
+
+    subgraph NEXTMONTH["🚀 Next Month: Compound Mastery"]
+        A4[PLAN<br/>2 min] --> B4[DELEGATE<br/>10 min]
+        B4 --> C4[ASSESS<br/>5 min]
+        C4 --> D4[CODIFY<br/>2 min]
+    end
+
+    D1 ===>|"Learns your<br/>patterns"| A2
+    D2 ===>|"Prevents your<br/>bugs"| A3
+    D3 ===>|"Knows your<br/>stack"| A4
+
+    style TODAY fill:#ffe4e1
+    style TOMORROW fill:#ffd4a3
+    style NEXTWEEK fill:#c3f0c3
+    style NEXTMONTH fill:#b4e7ff
 ```
 
-Each cycle through this loop makes your system smarter:
+### What This Really Means:
 
-1. **PLAN** → AI researches best practices for your stack
-2. **DELEGATE** → Execute with learned patterns applied
-3. **ASSESS** → Multiple specialized agents review in parallel
-4. **CODIFY** → Learnings become permanent knowledge
+**Week 1:** 4 hours to build a feature (learning your patterns)
+**Week 2:** 2 hours for similar complexity (applying patterns)
+**Month 2:** 40 minutes for the same work (full compound effect)
 
-**The Result**: Week 1 tasks that took days, take hours by Week 4.
+The system learns:
+- ✅ Your code style and conventions
+- ✅ Your common bugs and how to prevent them
+- ✅ Your architecture patterns
+- ✅ Your tech stack quirks (Cassandra partitions, Kafka offsets, Go concurrency)
+
+**The Result**: Not just faster development, but exponentially better code quality.
 
 ## 🤖 Our Tech Stack Agents
 
