@@ -93,41 +93,53 @@ claude /review
 
 ## 🔄 The Compounding Engineering Workflow
 
-```mermaid
-flowchart LR
-    subgraph TODAY["🌱 Today: First Feature"]
-        A1[PLAN<br/>30 min] --> B1[DELEGATE<br/>2 hours]
-        B1 --> C1[ASSESS<br/>1 hour]
-        C1 --> D1[CODIFY<br/>30 min]
-    end
+### How Your Development Accelerates Over Time
 
-    subgraph TOMORROW["🌿 Tomorrow: Pattern Recognition"]
-        A2[PLAN<br/>15 min] --> B2[DELEGATE<br/>1 hour]
-        B2 --> C2[ASSESS<br/>30 min]
-        C2 --> D2[CODIFY<br/>15 min]
-    end
-
-    subgraph NEXTWEEK["🌳 Next Week: Acceleration"]
-        A3[PLAN<br/>5 min] --> B3[DELEGATE<br/>30 min]
-        B3 --> C3[ASSESS<br/>15 min]
-        C3 --> D3[CODIFY<br/>5 min]
-    end
-
-    subgraph NEXTMONTH["🚀 Next Month: Compound Mastery"]
-        A4[PLAN<br/>2 min] --> B4[DELEGATE<br/>10 min]
-        B4 --> C4[ASSESS<br/>5 min]
-        C4 --> D4[CODIFY<br/>2 min]
-    end
-
-    D1 ===>|"Learns your<br/>patterns"| A2
-    D2 ===>|"Prevents your<br/>bugs"| A3
-    D3 ===>|"Knows your<br/>stack"| A4
-
-    style TODAY fill:#ffe4e1
-    style TOMORROW fill:#ffd4a3
-    style NEXTWEEK fill:#c3f0c3
-    style NEXTMONTH fill:#b4e7ff
 ```
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  📊 TIME TO BUILD SIMILAR FEATURES                                 │
+│                                                                     │
+│  Week 1:   ████████████████████████████████████  4 hours          │
+│  Week 2:   ████████████████████  2 hours                          │
+│  Week 4:   ████████  1 hour                                       │
+│  Month 2:  ██  20 minutes                                         │
+│                                                                     │
+│  🚀 10x FASTER with better quality                                │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+     PLAN           DELEGATE         ASSESS          CODIFY
+      🎯      ➜       📋       ➜      🔍       ➜      📝
+   Research        AI Builds      Review Code    Save Learning
+     ┃                ┃               ┃               ┃
+     └────────────────┴───────────────┴───────────────┘
+                           ⬇
+                   Knowledge compounds
+                   for next iteration
+```
+
+### The 4 Phases That Compound:
+
+**1. 🎯 PLAN** - AI researches best practices for your exact stack
+   - Searches Cassandra docs for partition strategies
+   - Finds Go concurrency patterns that work
+   - Learns Kafka delivery guarantees
+
+**2. 📋 DELEGATE** - AI builds with accumulated knowledge
+   - Applies your code style automatically
+   - Uses patterns that worked before
+   - Avoids mistakes from previous iterations
+
+**3. 🔍 ASSESS** - 23 specialized agents review in parallel
+   - `cassandra-guardian` prevents hot partitions
+   - `kafka-guardian` ensures no data loss
+   - `golang-reviewer` catches race conditions
+
+**4. 📝 CODIFY** - Learnings become permanent rules
+   - "Always use prepared statements with Cassandra"
+   - "Never use unbuffered channels in Go"
+   - "Always commit Kafka offsets after processing"
 
 ### What This Really Means:
 
