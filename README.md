@@ -222,24 +222,6 @@ The system learns:
 | `/resolve` | Parallel fixes | Resolves multiple issues simultaneously |
 | `/context` | Memory management | Monitors token usage and suggests compaction |
 
-## 📈 Real-World Impact
-
-### Metrics from Production Use (Every's Cora Email Product)
-
-| Metric | Before | After 3 Months | Improvement |
-|--------|--------|----------------|-------------|
-| Feature Delivery | 1-2 weeks | 1-3 days | **5-10x faster** |
-| Bugs in Production | 15-20 per release | 3-5 per release | **75% reduction** |
-| PR Review Time | 2-3 days | 2-4 hours | **10x faster** |
-| Onboarding Time | 2-3 months | 1-2 weeks | **6x faster** |
-
-### Expected Impact for Distributed Systems
-
-- **Cassandra**: Prevent hot partitions before they happen
-- **Kafka**: Eliminate data loss from offset mismanagement
-- **Go Services**: Catch concurrency bugs in review, not production
-- **React Apps**: Fix performance issues before users complain
-- **Java/Spring**: Avoid enterprise pattern hell
 
 ## 💡 Philosophy: The Mindset Shift
 
@@ -267,7 +249,7 @@ Review code → Standards extracted → Applied forever
 - **Cassandra Consulting**: From modeling to operations at scale
 - **Kafka Architecture**: Event-driven systems that don't lose data
 - **Distributed Systems**: Building systems that scale
-- **AxonOps**: Cassandra observability and management platform
+- **Performance Engineering**: Optimizing for real-world workloads
 
 We've taken these production learnings and encoded them into our AI agents.
 
@@ -283,7 +265,6 @@ For the original framework or different tech stacks, visit [every-marketplace](h
 ## 🔗 Related Projects
 
 - **[Every Marketplace](https://github.com/EveryInc/every-marketplace)** - The original framework
-- **[AxonOps](https://axonops.com)** - Our Cassandra observability platform
 - **[Apache Cassandra](https://cassandra.apache.org)** - The database that scales
 - **[Apache Kafka](https://kafka.apache.org)** - Event streaming platform
 - **[OpenSearch](https://opensearch.org)** - Search and analytics engine
