@@ -1,6 +1,6 @@
 # AI Stack Engineering - Claude Code Plugin Marketplace
 
-This repository is a Claude Code plugin marketplace for Digitalis.io that distributes the `ai-stack-engineering` plugin customized for our tech stack: Go, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch.
+This repository is a Claude Code plugin marketplace for Digitalis.io that distributes the `ai-stack-engineering` plugin customized for our tech stack: Go, Java/Spring Boot, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch.
 
 **Based on [every-marketplace](https://github.com/EveryInc/every-marketplace) by Every, Inc.** - We're grateful to Kieran Klaassen and the Every team for creating the original compounding engineering framework.
 
@@ -14,7 +14,7 @@ ai-stack-engineering/
     └── compounding-engineering/   # The plugin (inherited structure)
         ├── .claude-plugin/
         │   └── plugin.json        # Plugin metadata
-        ├── agents/                # 22 specialized AI agents (17 original + 5 new)
+        ├── agents/                # 23 specialized AI agents (17 original + 6 new)
         ├── commands/              # 6 slash commands
         └── README.md              # Plugin documentation
 ```
@@ -23,6 +23,7 @@ ai-stack-engineering/
 
 Our fork adds these agents for the Digitalis.io tech stack:
 - `golang-reviewer` - Idiomatic Go review (Uber style guide, concurrency, interfaces)
+- `java-craftsman` - Battle-tested Java/Spring Boot review, preventing overengineering disasters
 - `cassandra-guardian` - Cassandra data modeling (modern compaction strategies), preventing hot partitions
 - `kafka-guardian` - Event streaming reliability, preventing data loss
 - `react-reviewer` - Modern React/TypeScript, fixing re-renders and hook issues
@@ -207,7 +208,7 @@ cat plugins/compounding-engineering/.claude-plugin/plugin.json | jq .
 Tags should reflect the compounding engineering philosophy and our tech stack:
 
 - Core philosophy: `ai-powered`, `compounding-engineering`, `workflow-automation`, `knowledge-management`
-- Tech stack: `go`, `golang`, `react`, `typescript`, `cassandra`, `postgresql`, `kafka`, `opensearch`
+- Tech stack: `go`, `golang`, `java`, `spring-boot`, `react`, `typescript`, `cassandra`, `postgresql`, `kafka`, `opensearch`
 - General: `code-review`, `quality`
 
 ## Commit Conventions
@@ -242,8 +243,9 @@ _This section captures important learnings as we work on this repository._
 
 Created AI Stack Engineering as a fork of every-marketplace by Every, Inc. Key customizations:
 
-- Added 5 new stack-specific agents with personality and voice matching existing quality:
+- Added 6 new stack-specific agents with personality and voice matching existing quality:
   - `golang-reviewer` - Pragmatic Go engineer who's debugged production at 3am
+  - `java-craftsman` - Battle-tested Java veteran who's seen AbstractFactoryFactory and lived
   - `cassandra-guardian` - Battle-hardened Cassandra expert (modern features, UCS)
   - `kafka-guardian` - Reliability engineer who's hunted down data loss bugs
   - `react-reviewer` - Frontend dev who's fixed infinite re-renders too many times

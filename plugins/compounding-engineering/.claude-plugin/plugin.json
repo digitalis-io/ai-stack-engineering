@@ -16,6 +16,8 @@
     "knowledge-management",
     "go",
     "golang",
+    "java",
+    "spring-boot",
     "react",
     "typescript",
     "cassandra",
@@ -26,7 +28,7 @@
     "quality"
   ],
   "components": {
-    "agents": 22,
+    "agents": 23,
     "commands": 6
   },
   "agents": {
@@ -40,6 +42,11 @@
         "name": "react-reviewer",
         "description": "Modern React/TypeScript review catching re-renders, hook dependencies, and component architecture issues",
         "use_cases": ["react-review", "typescript-review", "hooks-optimization"]
+      },
+      {
+        "name": "java-craftsman",
+        "description": "Battle-tested Java/Spring Boot review from a 20-year veteran who prevents overengineering and AbstractFactoryFactory disasters",
+        "use_cases": ["java-review", "spring-boot-review", "anti-pattern-detection", "simplification"]
       },
       {
         "name": "dhh-rails-reviewer",

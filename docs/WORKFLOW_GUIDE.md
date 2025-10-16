@@ -58,10 +58,11 @@ Day 30: Category of bugs → Impossible to occur
 
 ### The Shift for Digitalis.io
 
-With our stack (Go, React/TypeScript, Cassandra, PostgreSQL, Kafka, OpenSearch), we're not just writing code—we're building a system that:
+With our stack (Go, Java, React/TypeScript, Cassandra, PostgreSQL, Kafka, OpenSearch), we're not just writing code—we're building a system that:
 - Learns from every Cassandra hot partition
 - Prevents Kafka consumer lag issues before they happen
 - Optimizes Go concurrency patterns automatically
+- Prevents Java overengineering and AbstractFactoryFactory disasters
 - Catches React re-render issues in review
 - Builds on PostgreSQL query patterns
 - Improves OpenSearch relevance with each iteration
@@ -861,6 +862,60 @@ Our Kafka expert ensures:
 - Cluster state health
 - Memory pressure indicators
 
+### Java/Spring Boot Best Practices
+
+#### Structuring PRDs for Java Services
+
+```markdown
+# PRD: Order Management Service
+
+## Tech Requirements
+- Java 17+ with records
+- Spring Boot 3.x
+- Constructor injection only
+- Testcontainers for integration tests
+- Micrometer metrics
+
+## Performance Targets
+- P99 latency < 200ms
+- Support 5k RPS
+- Memory footprint < 512MB
+
+## Architecture
+- Simple layers: Controller → Service → Repository
+- No unnecessary abstractions
+- Spring defaults where possible
+```
+
+#### What java-craftsman Checks
+
+Our Java veteran looks for:
+- Overengineering and unnecessary abstractions
+- Spring Boot misconfigurations
+- Pattern abuse (Factory factories, etc.)
+- Field injection instead of constructor
+- Missing transaction boundaries
+- N+1 query problems
+- Memory leaks from improper stream handling
+
+#### Patterns to Codify
+
+```markdown
+# CLAUDE.md Java Patterns
+
+## Spring Boot
+- Constructor injection exclusively
+- @Transactional only on service layer
+- Profiles: dev, prod (not 15 variations)
+- Spring defaults over custom config
+
+## Design
+- Maximum 3 layers for CRUD
+- Interfaces only when multiple implementations
+- No AbstractSingletonProxyFactoryBean
+- YAGNI: You Aren't Gonna Need It
+```
+
 ### React/TypeScript Best Practices
 
 #### What react-reviewer Checks
@@ -1254,6 +1309,7 @@ claude /work "Add connection pooling to Cassandra client"
 
 **Agents invoked**:
 - `golang-reviewer`
+- `java-craftsman`
 - `cassandra-guardian`
 - `kafka-guardian`
 - `react-reviewer`
@@ -1493,6 +1549,30 @@ This query will timeout when your index hits 10GB:
 ```
 
 **Closing line**: "Relevance is a journey, not a destination. But timeout errors are definitely a destination you want to avoid."
+
+#### `java-craftsman` - The Battle-Tested Java Veteran
+
+**Personality**: A 20-year Java veteran who's survived every framework migration, debugged every production disaster, and seen AbstractSingletonProxyFactoryBean used unironically.
+
+**Philosophy**: "I've seen this movie before. It doesn't end well. Your 'clean architecture' just added 6 months to delivery."
+
+**What it checks**:
+- Overengineering and unnecessary abstractions
+- Spring Boot misconfigurations
+- Pattern abuse (Factory factories)
+- Field injection anti-patterns
+- Transaction boundary issues
+- Performance problems
+
+**Example feedback**:
+```markdown
+Found the enterprise special - 15 layers for a CRUD endpoint:
+- OrderController → OrderFacade → OrderService → OrderManager → OrderRepository
+- Fix: Controller → Service → Repository. Done.
+- Why: The next developer will hunt you down. I've seen it happen.
+```
+
+**Closing line**: "Keep it simple, test it well, and may your logs be forever free of NullPointerExceptions."
 
 ### Core Review Agents
 
