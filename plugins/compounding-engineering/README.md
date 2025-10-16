@@ -71,17 +71,27 @@ PostgreSQL optimization is covered by the existing `data-integrity-guardian` age
 
 ## Installation
 
-### From Marketplace
+### Method 1: Quick Install from GitHub (Recommended)
 
 ```bash
+# Add marketplace directly from GitHub
 claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
+
+# Install the plugin
 claude /plugin install ai-stack-engineering
 ```
 
-### From Local Directory
+### Method 2: Local Install (For Customization)
 
 ```bash
-claude /plugin marketplace add /path/to/ai-stack-engineering
+# Clone the repository
+git clone https://github.com/digitalis-io/ai-stack-engineering
+cd ai-stack-engineering
+
+# Add marketplace from local path
+claude /plugin marketplace add ./ai-stack-engineering
+
+# Install the plugin
 claude /plugin install ai-stack-engineering
 ```
 

@@ -83,6 +83,12 @@ Check for these indicators to determine project type:
 - `.py` files
 - `setup.py` or `poetry.lock`
 
+**Java/Spring Boot Project**:
+- `pom.xml` or `build.gradle`
+- `.java` files
+- `src/main/java` structure
+- `@SpringBootApplication` annotations
+
 **Data Infrastructure** (detected within code):
 - Cassandra: gocql/datastax imports, `.cql` files, data modeling
 - Kafka: Sarama/franz-go imports, event schemas, producer/consumer code
@@ -113,13 +119,15 @@ For React/TypeScript Frontend:
 For Rails projects:
 1. Task kieran-rails-reviewer(PR content)
 2. Task dhh-rails-reviewer(PR title)
-3. If turbo is used: Task rails-turbo-expert(PR content)
 
 For TypeScript projects:
 1. Task kieran-typescript-reviewer(PR content)
 
 For Python projects:
 1. Task kieran-python-reviewer(PR content)
+
+For Java/Spring Boot projects:
+1. Task java-craftsman(PR content)
 
 **Data Infrastructure Reviewers (if applicable)**:
 - If Cassandra schemas/queries: Task cassandra-guardian(PR content)
@@ -128,14 +136,14 @@ For Python projects:
 
 **Universal Reviewers (run for all project types)**:
 4. Task git-history-analyzer(PR content)
-5. Task dependency-detective(PR content)
-6. Task pattern-recognition-specialist(PR content)
-7. Task architecture-strategist(PR content)
-8. Task code-philosopher(PR content)
-9. Task security-sentinel(PR content)
-10. Task performance-oracle(PR content)
-11. Task devops-harmony-analyst(PR content)
-12. Task data-integrity-guardian(PR content)
+5. Task pattern-recognition-specialist(PR content)
+6. Task architecture-strategist(PR content)
+7. Task security-sentinel(PR content)
+8. Task performance-oracle(PR content)
+9. Task data-integrity-guardian(PR content)
+10. Task code-simplicity-reviewer(PR content)
+11. Task best-practices-researcher(PR content)
+12. Task repo-research-analyst(PR content)
 
 </parallel_tasks>
 

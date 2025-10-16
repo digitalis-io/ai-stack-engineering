@@ -38,13 +38,26 @@ Our contribution focuses on adapting their framework for distributed systems eng
 
 ## 🚀 Quick Start
 
-### Installation (3 Steps + Context7)
+### Installation
 
+#### Method 1: Quick Install (Recommended)
+```bash
+# 1. Add marketplace directly from GitHub
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
+
+# 2. Install the plugin
+claude /plugin install ai-stack-engineering
+
+# 3. (Recommended) Install Context7 for up-to-date docs
+claude mcp add --transport sse context7 https://mcp.context7.com/sse
+```
+
+#### Method 2: Local Install (For Customization)
 ```bash
 # 1. Clone the repository
 git clone https://github.com/digitalis-io/ai-stack-engineering
 
-# 2. Add the marketplace
+# 2. Add marketplace from local path
 claude /plugin marketplace add ./ai-stack-engineering
 
 # 3. Install the plugin

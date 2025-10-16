@@ -166,26 +166,31 @@ Compounding approach:
 - GitHub account (for issue tracking)
 - Basic understanding of your tech stack
 
-### Step 1: Clone the Repository
+### Installation Method 1: Quick Install (Recommended)
 
 ```bash
-git clone https://github.com/digitalis-io/ai-stack-engineering
-cd ai-stack-engineering
-```
+# Add marketplace directly from GitHub
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
 
-### Step 2: Install the Marketplace Locally
-
-```bash
-claude /plugin marketplace add /path/to/ai-stack-engineering
-```
-
-### Step 3: Install the Plugin
-
-```bash
+# Install the plugin
 claude /plugin install ai-stack-engineering
 ```
 
-### Step 4: Verify Installation
+### Installation Method 2: Local Install (For Customization)
+
+```bash
+# Clone the repository
+git clone https://github.com/digitalis-io/ai-stack-engineering
+cd ai-stack-engineering
+
+# Add marketplace from local path
+claude /plugin marketplace add ./ai-stack-engineering
+
+# Install the plugin
+claude /plugin install ai-stack-engineering
+```
+
+### Step 3: Verify Installation
 
 ```bash
 # Test a command
@@ -195,7 +200,7 @@ claude /review
 claude agent golang-reviewer "check this Go code"
 ```
 
-### Step 5: Initial Configuration
+### Step 4: Initial Configuration
 
 Create your initial CLAUDE.md:
 ```bash
@@ -1991,9 +1996,14 @@ Once you start, you can't stop seeing opportunities:
 
 ```bash
 # 1. Install (5 min)
-git clone https://github.com/digitalis-io/ai-stack-engineering
-claude /plugin marketplace add ./ai-stack-engineering
+# Quick install from GitHub
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
 claude /plugin install ai-stack-engineering
+
+# OR clone locally for customization
+# git clone https://github.com/digitalis-io/ai-stack-engineering
+# claude /plugin marketplace add ./ai-stack-engineering
+# claude /plugin install ai-stack-engineering
 
 # 2. Plan something small (10 min)
 claude /plan "Add health check endpoint to Go service"

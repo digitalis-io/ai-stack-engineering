@@ -15,16 +15,26 @@ Each unit of engineering work makes the next one easier. Your code reviews teach
 
 ## Installation
 
-### Step 1: Install the Plugin (3 Commands)
+### Step 1: Install the Plugin
 
+#### Option A: Quick Install (Recommended)
 ```bash
-# 1. Clone the plugin repository
+# Add marketplace directly from GitHub
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
+
+# Install the plugin
+claude /plugin install ai-stack-engineering
+```
+
+#### Option B: Local Install (For Customization)
+```bash
+# Clone the plugin repository
 git clone https://github.com/digitalis-io/ai-stack-engineering
 
-# 2. Add marketplace locally
+# Add marketplace from local path
 claude /plugin marketplace add ./ai-stack-engineering
 
-# 3. Install the plugin
+# Install the plugin
 claude /plugin install ai-stack-engineering
 ```
 
@@ -194,6 +204,14 @@ Same complexity. 6x faster. 10x fewer bugs.
 
 **Ready?** Install now. Build something. Watch it compound.
 
+Quick install (one-liner):
+```bash
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering && \
+claude /plugin install ai-stack-engineering && \
+echo "🚀 Ready to compound your engineering!"
+```
+
+Or with local customization:
 ```bash
 git clone https://github.com/digitalis-io/ai-stack-engineering && \
 claude /plugin marketplace add ./ai-stack-engineering && \

@@ -157,17 +157,25 @@ Each plugin has its own plugin.json with detailed metadata:
 
 ### Test Locally
 
-1. Install the marketplace locally:
+#### Option 1: Test from GitHub URL
 
-   ```bash
-   claude /plugin marketplace add /Users/yourusername/ai-stack-engineering
-   ```
+```bash
+# Add marketplace from GitHub
+claude /plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
 
-2. Install the plugin:
+# Install the plugin
+claude /plugin install ai-stack-engineering
+```
 
-   ```bash
-   claude /plugin install ai-stack-engineering
-   ```
+#### Option 2: Test from Local Path
+
+```bash
+# Add marketplace from local path
+claude /plugin marketplace add /path/to/ai-stack-engineering
+
+# Install the plugin
+claude /plugin install ai-stack-engineering
+```
 
 3. Test agents and commands:
    ```bash
