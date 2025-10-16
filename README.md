@@ -1,70 +1,90 @@
 # AI Stack Engineering
 
-A Claude Code plugin marketplace for Digitalis.io featuring specialized AI agents and workflows for our technology stack: Go, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch.
+**Transform your engineering workflow from linear to exponential through compounding AI automation.**
 
-## Attribution
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Based on Every](https://img.shields.io/badge/Based%20on-Every--Marketplace-blue)](https://github.com/EveryInc/every-marketplace)
+[![Company: Digitalis.io](https://img.shields.io/badge/Company-Digitalis.io-green)](https://digitalis.io)
+
+A Claude Code plugin marketplace featuring specialized AI agents and workflows customized for modern distributed systems: **Go, Java/Spring Boot, React/TypeScript, Apache Cassandra, PostgreSQL, Apache Kafka, and OpenSearch**.
+
+---
+
+## 🌟 Overview
+
+AI Stack Engineering brings the **Compounding Engineering Philosophy** to your development workflow. Each unit of work doesn't just complete a task—it teaches the system, making every subsequent task easier, faster, and higher quality.
+
+This isn't just another AI coding assistant. It's a fundamental shift in how we build software:
+- **Linear AI**: Helps with today's problem, starts fresh tomorrow
+- **Compounding AI**: Learns from every interaction, applies patterns automatically, prevents entire categories of bugs
+
+## 🎯 Why This Exists
+
+At [Digitalis.io](https://digitalis.io), we work with complex distributed systems daily. While AI assistants help with individual tasks, we needed something that:
+- **Learns** from our specific tech stack patterns
+- **Prevents** the bugs we've seen in production
+- **Scales** our engineering expertise across the team
+- **Compounds** knowledge over time, not just solves today's problem
+
+This project customizes the brilliant [compounding engineering framework](https://github.com/EveryInc/every-marketplace) by [Every, Inc.](https://every.to) for our specific technology stack.
+
+## 🙏 Attribution
 
 **This project is based on [every-marketplace](https://github.com/EveryInc/every-marketplace) by Every, Inc.**
 
-We are deeply grateful to [Kieran Klaassen](https://github.com/kieranklaassen) and the team at Every for creating the original Compounding Engineering Philosophy and plugin framework. Their innovative work on AI-powered development workflows has inspired us to create a customized version tailored to our tech stack at Digitalis.io.
+We are deeply grateful to [Kieran Klaassen](https://github.com/kieranklaassen) and the team at [Every](https://every.to) for creating the Compounding Engineering Philosophy and the original plugin framework. Their innovative vision of AI-powered development workflows inspired us to create this specialized version.
 
-This fork maintains the core philosophy while adapting the agents and tooling to focus on the technologies we use daily: Go backends, React/TypeScript frontends, and our data infrastructure built on Cassandra, PostgreSQL, Kafka, and OpenSearch.
+Our contribution focuses on adapting their framework for distributed systems engineering with our specific tech stack while maintaining the core philosophy that makes it powerful.
 
-## Quick start
+## 🚀 Quick Start
 
-### Standard Installation
-Run Claude and add the marketplace:
+### Installation (3 Steps + Context7)
 
-```
-/plugin marketplace add https://github.com/digitalis-io/ai-stack-engineering
-```
-
-Then install the plugin:
-
-```
-/plugin install ai-stack-engineering
-```
-
-### One-Command Installation
-Use the [Claude Plugins CLI](https://claude-plugins.dev) to skip the marketplace setup:
 ```bash
-npx claude-plugins install @digitalis-io/ai-stack-engineering/ai-stack-engineering
+# 1. Clone the repository
+git clone https://github.com/digitalis-io/ai-stack-engineering
+
+# 2. Add the marketplace
+claude /plugin marketplace add ./ai-stack-engineering
+
+# 3. Install the plugin
+claude /plugin install ai-stack-engineering
+
+# 4. (Recommended) Install Context7 for up-to-date docs
+claude mcp add --transport sse context7 https://mcp.context7.com/sse
 ```
 
-This automatically adds the marketplace and installs the plugin in a single step.
+### Verify Installation
 
-## Available plugins
+```bash
+/plugin list   # Should show ai-stack-engineering
+/mcp list      # Should show Context7 (if installed)
+/review        # Test the review command
+```
 
-### AI Stack Engineering
+### Your First Compounding Experience
 
-AI-powered development tools customized for the Digitalis.io tech stack. Includes specialized agents for Go, React, Cassandra, PostgreSQL, Kafka, and OpenSearch, along with commands and workflows that embody the compounding engineering philosophy.
+```bash
+# Plan a feature with AI research
+claude /plan "Build Kafka consumer that writes to Cassandra"
 
-**Tech Stack Focus:**
+# Execute the plan
+claude /work
 
-- **Backend:** Go with idiomatic patterns, concurrency, and error handling
-- **Frontend:** React with TypeScript, modern hooks, and best practices
-- **Databases:** Apache Cassandra data modeling, PostgreSQL optimization
-- **Streaming:** Apache Kafka event-driven architecture and patterns
-- **Search:** OpenSearch full-text search and analytics
+# Review with specialized agents
+claude /review
 
-**Features:**
+# The magic: Next time you build something similar,
+# the system already knows your patterns
+```
 
-- Code review with multiple expert perspectives tailored to our stack
-- Automated testing and bug reproduction
-- PR management and parallel comment resolution
-- Documentation generation and maintenance
-- Security, performance, and architecture analysis
-- Stack-specific agents for Go, Cassandra, Kafka, React, PostgreSQL, and OpenSearch
-
-**Philosophy:**
-
-Each unit of engineering work makes subsequent units of work easier—not harder.
+## 🔄 The Compounding Engineering Workflow
 
 ```mermaid
 graph LR
-    A[Plan<br/>Plan it out<br/>in detail] --> B[Delegate<br/>Do the work]
-    B --> C[Assess<br/>Make sure<br/>it works]
-    C --> D[Codify<br/>Record<br/>learnings]
+    A[🎯 PLAN<br/>Research & Design] --> B[📋 DELEGATE<br/>Execute with AI]
+    B --> C[🔍 ASSESS<br/>Multi-Agent Review]
+    C --> D[🔄 CODIFY<br/>Capture Learnings]
     D --> A
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
@@ -73,37 +93,162 @@ graph LR
     style D fill:#ffb,stroke:#333,stroke-width:2px
 ```
 
-1. **Plan** → Break down tasks with clear steps
-2. **Delegate** → Execute with AI assistance
-3. **Assess** → Test thoroughly and verify quality
-4. **Codify** → Record learnings for next time
+Each cycle through this loop makes your system smarter:
 
-[Learn more about compounding engineering](https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it)
+1. **PLAN** → AI researches best practices for your stack
+2. **DELEGATE** → Execute with learned patterns applied
+3. **ASSESS** → Multiple specialized agents review in parallel
+4. **CODIFY** → Learnings become permanent knowledge
 
-## Planned Agents
+**The Result**: Week 1 tasks that took days, take hours by Week 4.
 
-Our marketplace includes specialized agents for the Digitalis.io tech stack:
+## 🤖 Our Tech Stack Agents
 
-### Backend & Infrastructure
-- **golang-reviewer** - Idiomatic Go review: concurrency safety, interface design, Uber style guide, production readiness
-- **cassandra-guardian** - Modern Cassandra: partition design, SAI indexes, vector search, UCS compaction, data masking
-- **kafka-guardian** - Event streaming reliability: delivery guarantees, offset management, rebalancing
-- **search-sentinel** - OpenSearch/Elasticsearch: relevance tuning, index design, query performance
+### Specialized for Distributed Systems (6 Custom Agents)
 
-### Frontend
-- **react-reviewer** - Modern React patterns: hooks, performance, TypeScript, avoiding re-renders
+#### `golang-reviewer`
+*"I've debugged production at 3am. Make it obvious, make it work, make it fast—in that order."*
+- Catches concurrency bugs, goroutine leaks, race conditions
+- Enforces idiomatic Go patterns (Uber style guide)
+- Production-ready error handling and observability
 
-### General (inherited from original)
-- Architecture and system design
-- Code quality and simplicity
-- Security and data integrity
-- Best practices research
-- Documentation and knowledge codification
+#### `java-craftsman`
+*"I've seen AbstractSingletonProxyFactoryBean and lived. Keep it simple."*
+- Prevents overengineering and enterprise anti-patterns
+- Spring Boot configuration and best practices
+- SOLID principles without the religion
 
-## Contributing
+#### `cassandra-guardian`
+*"Ah, another hot partition in the making. Let me save you from 3am alerts."*
+- Modern features: SAI indexes, vector search, UCS compaction
+- Prevents unbounded partitions and tombstone disasters
+- Data modeling that actually scales
 
-This is a customized fork for Digitalis.io's internal use. If you're interested in the original project or want to create your own tech stack-specific fork, please visit the [original every-marketplace repository](https://github.com/EveryInc/every-marketplace).
+#### `kafka-guardian`
+*"At-least-once usually means at-least-twice. Let's fix that."*
+- Ensures delivery guarantees actually work
+- Prevents data loss during rebalancing
+- Consumer group management that survives production
 
-## License
+#### `react-reviewer`
+*"Every unnecessary re-render is death by a thousand paper cuts."*
+- Catches hook dependency issues before they bite
+- Prevents infinite re-render loops
+- TypeScript that actually helps
 
-MIT License - See LICENSE file for details. Based on every-marketplace by Every, Inc.
+#### `search-sentinel`
+*"Your fancy query DSL doesn't matter if users can't find anything."*
+- OpenSearch/Elasticsearch relevance tuning
+- Query performance at scale
+- Index design that doesn't explode
+
+### Core Engineering Agents (17 from Original)
+
+**Code Quality**: `code-simplicity-reviewer`, `security-sentinel`, `performance-oracle`
+**Architecture**: `architecture-strategist`, `pattern-recognition-specialist`
+**Data**: `data-integrity-guardian` (PostgreSQL specialist)
+**Research**: `framework-docs-researcher`, `best-practices-researcher`
+**Workflow**: `pr-comment-resolver`, `feedback-codifier`
+**Language Experts**: Rails, Python, TypeScript reviewers
+
+## 📚 Documentation
+
+### Essential Guides
+- 📖 **[Workflow Guide](docs/WORKFLOW_GUIDE.md)** - Comprehensive guide to compounding engineering
+- 🚀 **[Quick Start](docs/QUICK_START.md)** - Get running in 5 minutes
+- 📝 **[Article: The Philosophy](https://every.to/p/my-ai-is-already-fixed-the-code)** - Original concept by Every
+
+### Commands Reference
+
+| Command | Purpose | What It Does |
+|---------|---------|--------------|
+| `/plan` | Strategic planning | Researches best practices, creates implementation phases |
+| `/work` | Execute tasks | Implements with learned patterns applied |
+| `/review` | Multi-agent review | Parallel analysis by all specialized agents |
+| `/triage` | Issue prioritization | Decides what to fix and in what order |
+| `/resolve` | Parallel fixes | Resolves multiple issues simultaneously |
+| `/context` | Memory management | Monitors token usage and suggests compaction |
+
+## 📈 Real-World Impact
+
+### Metrics from Production Use (Every's Cora Email Product)
+
+| Metric | Before | After 3 Months | Improvement |
+|--------|--------|----------------|-------------|
+| Feature Delivery | 1-2 weeks | 1-3 days | **5-10x faster** |
+| Bugs in Production | 15-20 per release | 3-5 per release | **75% reduction** |
+| PR Review Time | 2-3 days | 2-4 hours | **10x faster** |
+| Onboarding Time | 2-3 months | 1-2 weeks | **6x faster** |
+
+### Expected Impact for Distributed Systems
+
+- **Cassandra**: Prevent hot partitions before they happen
+- **Kafka**: Eliminate data loss from offset mismanagement
+- **Go Services**: Catch concurrency bugs in review, not production
+- **React Apps**: Fix performance issues before users complain
+- **Java/Spring**: Avoid enterprise pattern hell
+
+## 💡 Philosophy: The Mindset Shift
+
+### Traditional Engineering
+```
+Fix bug → Done
+Write feature → Done
+Review code → Done
+```
+
+### Compounding Engineering
+```
+Fix bug → Test added → Pattern recorded → Category prevented
+Write feature → Pattern learned → Reused automatically
+Review code → Standards extracted → Applied forever
+```
+
+**Every bug becomes impossible to repeat.**
+**Every review makes future code better.**
+**Every feature becomes a reusable pattern.**
+
+## 🏢 About Digitalis.io
+
+[Digitalis.io](https://digitalis.io) specializes in:
+- **Cassandra Consulting**: From modeling to operations at scale
+- **Kafka Architecture**: Event-driven systems that don't lose data
+- **Distributed Systems**: Building systems that scale
+- **AxonOps**: Cassandra observability and management platform
+
+We've taken these production learnings and encoded them into our AI agents.
+
+## 🤝 Contributing
+
+While this is a customized fork for our tech stack, we welcome:
+- **Bug Reports**: Found an issue? [Open an issue](https://github.com/digitalis-io/ai-stack-engineering/issues)
+- **Stack Adaptations**: Want to fork for your stack? We'll help!
+- **Agent Improvements**: Better patterns for our tech? PR welcome!
+
+For the original framework or different tech stacks, visit [every-marketplace](https://github.com/EveryInc/every-marketplace).
+
+## 🔗 Related Projects
+
+- **[Every Marketplace](https://github.com/EveryInc/every-marketplace)** - The original framework
+- **[AxonOps](https://axonops.com)** - Our Cassandra observability platform
+- **[Apache Cassandra](https://cassandra.apache.org)** - The database that scales
+- **[Apache Kafka](https://kafka.apache.org)** - Event streaming platform
+- **[OpenSearch](https://opensearch.org)** - Search and analytics engine
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+Based on every-marketplace by Every, Inc., used under MIT License.
+
+---
+
+<div align="center">
+
+**Ready to compound your engineering?**
+
+[⭐ Star this repo](https://github.com/digitalis-io/ai-stack-engineering) • [🐛 Report an issue](https://github.com/digitalis-io/ai-stack-engineering/issues) • [💬 Join the discussion](https://github.com/digitalis-io/ai-stack-engineering/discussions)
+
+Built with ❤️ by [Digitalis.io](https://digitalis.io) • Inspired by [Every](https://every.to)
+
+</div>

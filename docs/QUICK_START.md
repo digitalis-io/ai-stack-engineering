@@ -13,7 +13,9 @@ Each unit of engineering work makes the next one easier. Your code reviews teach
 - 30 minutes for your first feature
 - (Next time: 15 minutes for the same complexity)
 
-## Installation (3 Commands)
+## Installation
+
+### Step 1: Install the Plugin (3 Commands)
 
 ```bash
 # 1. Clone the plugin repository
@@ -25,6 +27,23 @@ claude /plugin marketplace add ./ai-stack-engineering
 # 3. Install the plugin
 claude /plugin install ai-stack-engineering
 ```
+
+### Step 2: Install Context7 MCP (Recommended)
+
+For up-to-date documentation:
+
+```bash
+claude mcp add --transport sse context7 https://mcp.context7.com/sse
+```
+
+### Step 3: Verify Installation
+
+```bash
+/plugin list  # Check plugin installed
+/mcp list    # Check Context7 available
+```
+
+💡 **Why Context7?** Fetches current docs for our tech stack, ensuring accurate, version-specific code.
 
 ## The 4 Phases
 

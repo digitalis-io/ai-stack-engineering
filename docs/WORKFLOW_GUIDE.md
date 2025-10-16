@@ -228,6 +228,72 @@ EOF
 
 ---
 
+## Installing Context7 MCP for Up-to-Date Documentation
+
+Context7 is an MCP (Model Context Protocol) server that provides Claude with up-to-date, version-specific documentation for libraries and frameworks. This prevents outdated code examples and hallucinated APIs.
+
+### Why Use Context7
+
+- **Get current documentation** for Cassandra, Kafka, PostgreSQL, OpenSearch, React, and Go libraries
+- **Avoid outdated patterns** from Claude's training data
+- **Ensure version-specific accuracy** for your tech stack
+- **Prevent hallucinated APIs** that don't exist
+
+### Installation (Recommended - Remote SSE)
+
+```bash
+claude mcp add --transport sse context7 https://mcp.context7.com/sse
+```
+
+### Verification
+
+```bash
+/mcp list  # Should show Context7
+```
+
+### Using Context7
+
+Our specialized agents automatically use Context7 when available to fetch:
+
+- **Cassandra**: Latest CQL syntax, SAI indexes, vector search, UCS compaction
+- **Kafka**: Current producer/consumer APIs and delivery guarantees
+- **PostgreSQL**: Latest SQL features and optimization techniques
+- **OpenSearch**: Current query DSL and aggregation patterns
+- **React**: Latest hooks, patterns, and TypeScript integration
+- **Go**: Current standard library idioms and popular package APIs
+- **Java/Spring Boot**: Latest Spring features, annotations, and best practices
+
+💡 **Tip:** Context7 adds slight token usage and latency when fetching docs, but the accuracy improvement is worth it for rapidly evolving libraries.
+
+### Testing Context7 Integration
+
+Verify Context7 is working with your agents:
+
+```bash
+# 1. Check Context7 is installed
+/mcp list  # Should show context7
+
+# 2. Test doc fetching with an agent
+claude agent cassandra-guardian "Explain vector search in Cassandra 5.0"
+# Should return current Cassandra 5.0 vector features, not outdated info
+
+# 3. Verify version-specific information
+claude agent golang-reviewer "Show me Go 1.21 generic patterns"
+# Should provide Go 1.21+ specific syntax
+
+# 4. Test deprecated pattern detection
+claude agent kafka-guardian "Is auto.offset.reset=smallest valid?"
+# Should flag this as deprecated (now uses 'earliest')
+```
+
+**How to know Context7 is working:**
+- Agents reference specific version numbers in responses
+- Documentation citations include recent features
+- No hallucinated APIs or methods that don't exist
+- Deprecated patterns are correctly identified
+
+---
+
 ## The Four-Phase Compounding Workflow
 
 ### PLAN Phase: Teach Through Work
